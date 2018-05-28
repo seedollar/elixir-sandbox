@@ -1,0 +1,14 @@
+# intelli-J
+*.iml
+*.ipr
+*.iws
+target/
+build/
+.idea/
+.gradle/
+
+# Gradle Wrapper
+gradle/
+gradlew
+gradlew.bat
+

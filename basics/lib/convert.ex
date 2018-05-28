@@ -12,7 +12,7 @@ defmodule Convert do
 	cm * 0.393700787
   end
 
-  def doubleMe(num) do
+  def doubleMe(num) when num < 100 do
 	num * 2
   end
 

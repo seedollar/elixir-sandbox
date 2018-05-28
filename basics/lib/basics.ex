@@ -1,6 +1,6 @@
-defmodule FirstApp do
+defmodule Basics do
   @moduledoc """
-  Documentation for FirstApp.
+  Documentation for Basics.
   """
 
   @doc """
@@ -8,7 +8,7 @@ defmodule FirstApp do
 
   ## Examples
 
-      iex> FirstApp.hello
+      iex> Basics.hello
       :world
 
   """
