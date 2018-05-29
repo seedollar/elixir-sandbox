@@ -18,6 +18,13 @@ defmodule Tuples do
     calculateFine(type, speed) 
   end
 
+  @doc """
+    This method works the same way as calculateFine/2 above, except it uses the built in function elem/2 to extract the elements from the tuple parameter.
+  """
+  def calculateFine2(tuple) do
+    calculateFine(elem(tuple, 0), elem(tuple, 1))
+  end
+
   defp calculateFine(:car, 120) do
     "$400"
   end
