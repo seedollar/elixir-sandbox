@@ -37,5 +37,11 @@ defmodule Lists do
     init = [1,2,3,4,5,6,7,8]
     Enum.reverse(init)
   end
-  
+
+  def enumFilter do
+    even = &(rem(&1, 2)==0)
+    numbers = [1,2,3,4,5,6,7,8,9,10]
+    Enum.filter(numbers, even)
+  end
+
 end
