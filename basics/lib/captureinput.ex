@@ -18,9 +18,9 @@ defmodule PromptInput do
     IO.getn("Selection: ")
   end
 
-  def calculateCarPrice do
-    carMake = captureMake
-    milage = captureMilage
+  def calculateCarPrice() do
+    carMake = captureMake()
+    milage = captureMilage()
     
     case carMake do
       "1" when milage > 100 -> 170000
@@ -31,7 +31,7 @@ defmodule PromptInput do
     end
   end
  
-  defp captureMake do
+  defp captureMake() do
     IO.puts("""
       What is the car make:
       1) BMW
@@ -39,14 +39,11 @@ defmodule PromptInput do
       3) Toyota
       4) Lexus
     """)
-    selection = IO.gets("Make: ")
-    String.first(selection)
+    IO.gets("Make: ") |> String.first()
   end
 
-  defp captureMilage do
+  defp captureMilage() do
     IO.puts("What is the milage on the vehicle: ")
-    input = IO.gets("Milage: ")
-    milage = String.strip(input)
-    String.to_integer(milage)
+    IO.gets("Milage: ") |> String.trim() |> String.to_integer()
   end
 end
