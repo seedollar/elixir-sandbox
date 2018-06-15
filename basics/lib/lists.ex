@@ -44,4 +44,13 @@ defmodule Lists do
     Enum.filter(numbers, even)
   end
 
+  @doc """
+    An example of how to apply a map reduce on a list using List.foldl(). The function will square the value and add it to the accumulator. The result is an aggregation of each result.
+  """
+  def foldlAccumulator do
+    list = [2,4,6]
+    sumsq = &(&2 + &1 * &1)
+    List.foldl(list, 0, sumsq)
+  end
+
 end
