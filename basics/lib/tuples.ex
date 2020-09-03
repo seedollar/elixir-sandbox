@@ -11,11 +11,25 @@ defmodule Tuples do
     tuple_size(createTuple())
   end
 
-  @doc """ 
+  @doc """
+    This illustration shows how you can use tuples in pattern matching
+  """
+  def tuple_pattern_matching do
+    {status, pid} = File.open("tuples.ex")
+    IO.puts "status = #{status}}"
+    pid
+
+    {status, pid} = File.open("doesnotexist.ex")
+    IO.puts "status = #{status}}"
+    pid
+
+  end
+
+  @doc """
     This is the public function which will propogate to the private ones below
   """
   def calculateFine({type, speed}) do
-    calculateFine(type, speed) 
+    calculateFine(type, speed)
   end
 
   @doc """
@@ -36,7 +50,7 @@ defmodule Tuples do
   defp calculateFine(:car, 240) do
     "$940"
   end
-	
+
   defp calculateFine(:bike, 100) do
     "$375"
   end

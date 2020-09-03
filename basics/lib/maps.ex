@@ -23,6 +23,13 @@ defmodule MapExamples do
     %{b: retValue} = declareMap2()
     retValue    
   end
+
+  def accessMap do
+    new_map = %{"ON" => "Ontario", "BC" => "British Columbia"}
+    IO.puts "Access Map Value: #{new_map["ON"]}"
+    colors = %{ red: 0xff0000, green: 0x00ff00, blue: 0x0000ff }
+    IO.puts "Access Map using atom key: #{colors[:red]}"
+  end
   
 
 end
