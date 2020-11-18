@@ -29,5 +29,11 @@ defmodule EnumFunctions do
     odd? = &(rem(&1,2) == 1)
     Enum.split_with(list, odd?)
   end
+
+  def enum_map do
+    double_fn = &(&1 * 2)
+    numbers = [1,2,3,4,5]
+    Enum.map(numbers, double_fn) # each number will be doubled
+  end
   
 end

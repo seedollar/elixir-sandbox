@@ -24,5 +24,9 @@ defmodule HigherOrderFunctions do
     Enum.map(1..10, sqrfunc)
   end
 
-  
+  def pass_func_as_parameter do
+    double_fn = fn num -> num * 2 end
+    apply = fn(fun, val) -> fun.(val) end
+    IO.puts apply.(double_fn, 12) # Should be 24
+  end
 end
